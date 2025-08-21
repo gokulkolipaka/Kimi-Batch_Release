@@ -1,0 +1,22 @@
+:root{
+  --bg:#ffffff;
+  --fg:#000000;
+  --card:#f5f5f5;
+  --accent:#667eea;
+}
+[data-theme="dark"]{
+  --bg:#000000;
+  --fg:#ffffff;
+  --card:#1e1e1e;
+}
+body{margin:0;font-family:Segoe UI;background:var(--bg);color:var(--fg)}
+#header{display:flex;align-items:center;padding:10px 20px;border-bottom:1px solid var(--card)}
+#companyLogo{height:40px;margin-right:10px}
+#themeToggle{margin-left:auto;font-size:20px;background:none;border:none;cursor:pointer}
+.card{background:var(--card);padding:25px;border-radius:8px;max-width:400px;margin:80px auto}
+.hidden{display:none}
+input,button{width:100%;padding:10px;margin:6px 0;border-radius:4px;border:1px solid #ccc}
+button{background:var(--accent);color:#fff;border:none;cursor:pointer}
+#watermark{position:fixed;bottom:10px;right:10px;font-size:30px;opacity:.1;pointer-events:none}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:8px;border:1px solid var(--card)}

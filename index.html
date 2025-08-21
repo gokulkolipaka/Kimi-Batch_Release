@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Batch Release Readiness Agent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header">
+    <img id="companyLogo" src="assets/logo.png" alt="Logo">
+    <span id="companyName">Graviti Pharmaceuticals</span>
+    <button id="themeToggle" title="Dark / Light mode">🌙</button>
+  </div>
+
+  <!-- LOGIN / SIGN-UP -->
+  <section id="authSection">
+    <div id="loginForm" class="card">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPw" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p><a href="#" onclick="showForgot()">Forgot password?</a></p>
+      <p><a href="#" onclick="showSignup()">Sign up</a></p>
+    </div>
+
+    <div id="signupForm" class="card hidden">
+      <h2>Sign Up</h2>
+      <input type="text" id="regName" placeholder="Full name">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPw" placeholder="Password">
+      <button onclick="register()">Register</button>
+      <p><a href="#" onclick="showLogin()">Back to login</a></p>
+    </div>
+
+    <div id="forgotForm" class="card hidden">
+      <h2>Reset Password</h2>
+      <input type="email" id="forgotEmail" placeholder="Email">
+      <button onclick="sendReset()">Send Reset Link</button>
+      <p><a href="#" onclick="showLogin()">Back to login</a></p>
+    </div>
+  </section>
+
+  <!-- ADMIN DASHBOARD -->
+  <section id="adminDash" class="hidden">
+    <h2>Admin Dashboard</h2>
+    <section>
+      <h3>Users</h3>
+      <table id="userTable"></table>
+      <button onclick="addUser()">Add User</button>
+    </section>
+    <section>
+      <h3>Batch Release</h3>
+      <div id="batchList"></div>
+    </section>
+    <button onclick="logout()">Logout</button>
+  </section>
+
+  <!-- USER DASHBOARD -->
+  <section id="userDash" class="hidden">
+    <h2>User Dashboard</h2>
+    <input type="file" id="docUpload" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.png">
+    <button onclick="uploadDocs()">Upload & Analyse</button>
+    <div id="gapReport"></div>
+    <button onclick="logout()">Logout</button>
+  </section>
+
+  <!-- WATERMARK -->
+  <div id="watermark">@GK</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
